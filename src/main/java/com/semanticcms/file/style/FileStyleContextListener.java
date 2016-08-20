@@ -36,7 +36,7 @@ public class FileStyleContextListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
 		SemanticCMS semanticCMS = SemanticCMS.getInstance(event.getServletContext());
 		// Add our CSS file
-		semanticCMS.addCssLink("/semanticcms-section-servlet/styles.css");
+		semanticCMS.addCssLink("/semanticcms-file-style/styles.css");
 		// Add link CSS classes
 		semanticCMS.addLinkCssClassResolver(
 			File.class,
