@@ -39,15 +39,6 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 	<url>https://semanticcms.com/docs/semanticcms-file-style/</url>
 	<description>Default style for files nested within SemanticCMS pages and elements.</description>
 
-	<developers>
-		<developer>
-			<name>AO Industries, Inc.</name>
-			<email>support@aoindustries.com</email>
-			<organization>AO Industries, Inc.</organization>
-			<organizationUrl>https://www.aoindustries.com/</organizationUrl>
-		</developer>
-	</developers>
-
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-file-style.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-file-style.git</developerConnection>
