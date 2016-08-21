@@ -51,3 +51,11 @@ a.semanticcms-file-directory-link {
 	/* TODO: Find properly licensed images and include them in this styles package */
 	background-image: url(../images/directory.gif);
 }
+li.semanticcms-file-list-item-directory {
+	/* TODO: Find properly licensed images and include them in this styles package */
+	list-style-image: url('../images/list-item/16x16/page-children.gif');
+}
+li.semanticcms-file-list-item-file {
+	/* TODO: Find properly licensed images and include them in this styles package */
+	list-style-image: url('../images/list-item/16x16/file.gif');
+}

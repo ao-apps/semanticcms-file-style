@@ -42,12 +42,27 @@ public class FileStyleContextListener implements ServletContextListener {
 			File.class,
 			new SemanticCMS.LinkCssClassResolver<File>() {
 				@Override
-				public String getCssLinkClass(File element) {
+				public String getCssLinkClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(element.getPageRef().getPath().endsWith(SEPARATOR_STRING)) {
+					if(file.getPageRef().getPath().endsWith(SEPARATOR_STRING)) {
 						return "semanticcms-file-directory-link";
 					} else {
 						return "semanticcms-file-file-link";
+					}
+				}
+			}
+		);
+		// Add list item CSS classes
+		semanticCMS.addListItemCssClassResolver(
+			File.class,
+			new SemanticCMS.ListItemCssClassResolver<File>() {
+				@Override
+				public String getListItemCssClass(File file) {
+					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
+					if(file.getPageRef().getPath().endsWith(SEPARATOR_STRING)) {
+						return "semanticcms-file-list-item-directory";
+					} else {
+						return "semanticcms-file-list-item-file";
 					}
 				}
 			}
