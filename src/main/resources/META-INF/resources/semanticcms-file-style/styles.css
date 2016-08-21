@@ -20,16 +20,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses/>.
  */
+span.semanticcms-file-file-link,
 a.semanticcms-file-file-link,
+span.semanticcms-file-directory-link,
 a.semanticcms-file-directory-link {
 	display: inline-block;
 	background-repeat: no-repeat;
 	background-position: left center;
-}
-a.semanticcms-file-file-link,
-a.semanticcms-file-directory-link {
 	white-space: nowrap;
 }
+span.semanticcms-file-file-link,
 a.semanticcms-file-file-link {
 	/*
 	padding-left: 20px;
@@ -43,6 +43,7 @@ a.semanticcms-file-file-link {
 	/* TODO: Find properly licensed images and include them in this styles package */
 	background-image: url(../images/file.png);
 }
+span.semanticcms-file-directory-link,
 a.semanticcms-file-directory-link {
 	padding-left: 26px;
 	min-height: 24px;
