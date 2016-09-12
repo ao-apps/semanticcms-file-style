@@ -38,6 +38,7 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 	<name>SemanticCMS File Style</name>
 	<url>https://semanticcms.com/file/style/</url>
 	<description>Default style for files nested within SemanticCMS pages and elements.</description>
+	<inceptionYear>2013</inceptionYear>
 
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-file-style.git</connection>
