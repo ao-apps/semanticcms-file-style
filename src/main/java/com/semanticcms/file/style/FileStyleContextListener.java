@@ -22,6 +22,7 @@
  */
 package com.semanticcms.file.style;
 
+import com.aoindustries.net.Path;
 import com.semanticcms.core.servlet.SemanticCMS;
 import com.semanticcms.file.model.File;
 import javax.servlet.ServletContextEvent;
@@ -43,7 +44,7 @@ public class FileStyleContextListener implements ServletContextListener {
 				@Override
 				public String getCssLinkClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getResourceRef().getPath().endsWith(File.SEPARATOR_STRING)) {
+					if(file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)) {
 						return "semanticcms-file-directory-link";
 					} else {
 						return "semanticcms-file-file-link";
@@ -58,7 +59,7 @@ public class FileStyleContextListener implements ServletContextListener {
 				@Override
 				public String getListItemCssClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getResourceRef().getPath().endsWith(File.SEPARATOR_STRING)) {
+					if(file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)) {
 						return "semanticcms-file-list-item-directory";
 					} else {
 						return "semanticcms-file-list-item-file";
