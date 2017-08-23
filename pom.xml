@@ -70,6 +70,7 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 								<links>
 									<link>${javac.link.javaApi}</link>
 									<link>${javac.link.javaeeApi.6}</link>
+									<link>https://aoindustries.com/ao-net-types/apidocs/</link>
 									<link>https://semanticcms.com/core/model/apidocs/</link>
 									<link>https://semanticcms.com/core/servlet/apidocs/</link>
 									<link>https://semanticcms.com/file/model/apidocs/</link>
@@ -88,6 +89,11 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.aoindustries</groupId>
+			<artifactId>ao-net-types</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId>
