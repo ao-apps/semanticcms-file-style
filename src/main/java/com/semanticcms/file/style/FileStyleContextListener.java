@@ -23,24 +23,24 @@
 package com.semanticcms.file.style;
 
 import com.aoindustries.net.Path;
-import com.semanticcms.core.servlet.SemanticCMS;
+import com.semanticcms.core.renderer.html.HtmlRenderer;
 import com.semanticcms.file.model.File;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener("Registers the styles for files in SemanticCMS.")
+@WebListener("Registers the styles for files in HtmlRenderer.")
 public class FileStyleContextListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
-		SemanticCMS semanticCMS = SemanticCMS.getInstance(event.getServletContext());
+		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(event.getServletContext());
 		// Add our CSS file
-		semanticCMS.addCssLink("/semanticcms-file-style/styles.css");
+		htmlRenderer.addCssLink("/semanticcms-file-style/styles.css");
 		// Add link CSS classes
-		semanticCMS.addLinkCssClassResolver(
+		htmlRenderer.addLinkCssClassResolver(
 			File.class,
-			new SemanticCMS.LinkCssClassResolver<File>() {
+			new HtmlRenderer.LinkCssClassResolver<File>() {
 				@Override
 				public String getCssLinkClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
@@ -53,9 +53,9 @@ public class FileStyleContextListener implements ServletContextListener {
 			}
 		);
 		// Add list item CSS classes
-		semanticCMS.addListItemCssClassResolver(
+		htmlRenderer.addListItemCssClassResolver(
 			File.class,
-			new SemanticCMS.ListItemCssClassResolver<File>() {
+			new HtmlRenderer.ListItemCssClassResolver<File>() {
 				@Override
 				public String getListItemCssClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
