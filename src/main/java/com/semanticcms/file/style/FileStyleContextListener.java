@@ -1,6 +1,6 @@
 /*
  * semanticcms-file-style - Default style for files nested within SemanticCMS pages and elements.
- * Copyright (C) 2016  AO Industries, Inc.
+ * Copyright (C) 2016, 2017  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,9 +22,9 @@
  */
 package com.semanticcms.file.style;
 
+import com.aoindustries.net.Path;
 import com.semanticcms.core.servlet.SemanticCMS;
 import com.semanticcms.file.model.File;
-import static com.semanticcms.file.model.File.SEPARATOR_STRING;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -44,7 +44,7 @@ public class FileStyleContextListener implements ServletContextListener {
 				@Override
 				public String getCssLinkClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getPageRef().getPath().endsWith(SEPARATOR_STRING)) {
+					if(file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)) {
 						return "semanticcms-file-directory-link";
 					} else {
 						return "semanticcms-file-file-link";
@@ -59,7 +59,7 @@ public class FileStyleContextListener implements ServletContextListener {
 				@Override
 				public String getListItemCssClass(File file) {
 					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getPageRef().getPath().endsWith(SEPARATOR_STRING)) {
+					if(file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)) {
 						return "semanticcms-file-list-item-directory";
 					} else {
 						return "semanticcms-file-list-item-file";

@@ -66,6 +66,7 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 								<!-- Java EE -->
 								<link>${javac.link.javaeeApi.6}</link>
 								<!-- Direct -->
+								<link>https://aoindustries.com/ao-net-types/apidocs/</link>
 								<link>https://semanticcms.com/core/model/apidocs/</link>
 								<link>https://semanticcms.com/core/servlet/apidocs/</link>
 								<link>https://semanticcms.com/file/model/apidocs/</link>
@@ -85,6 +86,14 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 				<scope>provided</scope>
 			</dependency>
 			<!-- Direct -->
+			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId><version>1.1.2-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId><version>1.1.2-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 			<dependency>
 				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId><version>1.9.1-SNAPSHOT</version>
 			</dependency>
@@ -119,6 +128,9 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 			<scope>provided</scope>
 		</dependency>
 		<!-- Direct -->
+		<dependency>
+			<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
 		</dependency>
