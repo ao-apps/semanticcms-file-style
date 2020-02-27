@@ -1,6 +1,6 @@
 /*
  * semanticcms-file-style - Default style for files nested within SemanticCMS pages and elements.
- * Copyright (C) 2016, 2017  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -30,7 +30,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener("Registers the styles for files in SemanticCMS.")
-public class FileStyleContextListener implements ServletContextListener {
+public class Initializer implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
@@ -40,32 +40,18 @@ public class FileStyleContextListener implements ServletContextListener {
 		// Add link CSS classes
 		semanticCMS.addLinkCssClassResolver(
 			File.class,
-			new SemanticCMS.LinkCssClassResolver<File>() {
-				@Override
-				public String getCssLinkClass(File file) {
-					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)) {
-						return "semanticcms-file-directory-link";
-					} else {
-						return "semanticcms-file-file-link";
-					}
-				}
-			}
+			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
+			(File file) -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+				? "semanticcms-file-directory-link"
+				: "semanticcms-file-file-link"
 		);
 		// Add list item CSS classes
 		semanticCMS.addListItemCssClassResolver(
 			File.class,
-			new SemanticCMS.ListItemCssClassResolver<File>() {
-				@Override
-				public String getListItemCssClass(File file) {
-					// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-					if(file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)) {
-						return "semanticcms-file-list-item-directory";
-					} else {
-						return "semanticcms-file-list-item-file";
-					}
-				}
-			}
+			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
+			(File file) -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+				? "semanticcms-file-list-item-directory"
+				: "semanticcms-file-list-item-file"
 		);
 	}
 
