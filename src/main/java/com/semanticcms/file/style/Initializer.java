@@ -36,7 +36,7 @@ public class Initializer implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
 		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(event.getServletContext());
 		// Add our CSS file
-		htmlRenderer.addCssLink("/semanticcms-file-style/styles.css");
+		htmlRenderer.addCssLink("/semanticcms-file-style/semanticcms-file.css");
 		// Add link CSS classes
 		htmlRenderer.addLinkCssClassResolver(
 			File.class,
