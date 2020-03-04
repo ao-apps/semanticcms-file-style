@@ -23,20 +23,28 @@
 package com.semanticcms.file.style;
 
 import com.aoindustries.net.Path;
+import com.aoindustries.web.resources.registry.Style;
+import com.aoindustries.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.renderer.html.HtmlRenderer;
 import com.semanticcms.file.model.File;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener("Registers the styles for files in HtmlRenderer.")
-public class Initializer implements ServletContextListener {
+@WebListener("Registers the styles for files in RegistryEE and HtmlRenderer.")
+public class FileStyle implements ServletContextListener {
+
+	public static final Style SEMANTICCMS_FILE = new Style("/semanticcms-file-style/semanticcms-file.css");
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
-		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(event.getServletContext());
+		ServletContext servletContext = event.getServletContext();
+
 		// Add our CSS file
-		htmlRenderer.addCssLink("/semanticcms-file-style/semanticcms-file.css");
+		RegistryEE.get(servletContext).global.styles.add(SEMANTICCMS_FILE);
+
+		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
 		// Add link CSS classes
 		htmlRenderer.addLinkCssClassResolver(
 			File.class,
