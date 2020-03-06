@@ -23,6 +23,7 @@
 package com.semanticcms.file.style;
 
 import com.aoindustries.net.Path;
+import com.aoindustries.web.resources.registry.Group;
 import com.aoindustries.web.resources.registry.Style;
 import com.aoindustries.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.renderer.html.HtmlRenderer;
@@ -35,6 +36,9 @@ import javax.servlet.annotation.WebListener;
 @WebListener("Registers the styles for files in RegistryEE and HtmlRenderer.")
 public class FileStyle implements ServletContextListener {
 
+	public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-file-style");
+
+	// TODO: Change to Group.Name once we have group-level ordering
 	public static final Style SEMANTICCMS_FILE = new Style("/semanticcms-file-style/semanticcms-file.css");
 
 	@Override
@@ -42,7 +46,11 @@ public class FileStyle implements ServletContextListener {
 		ServletContext servletContext = event.getServletContext();
 
 		// Add our CSS file
-		RegistryEE.get(servletContext).global.styles.add(SEMANTICCMS_FILE);
+		RegistryEE.Application.get(servletContext)
+			.activate(RESOURCE_GROUP) // TODO: Activate as-needed
+			.getGroup(RESOURCE_GROUP)
+			.styles
+			.add(SEMANTICCMS_FILE);
 
 		HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
 		// Add link CSS classes
