@@ -30,7 +30,7 @@ Default style for files nested within [SemanticCMS](https://github.com/aoindustr
 * [Project Home](https://semanticcms.com/file/style/)
 * [Changelog](https://semanticcms.com/file/style/changelog)
 * [API Docs](https://semanticcms.com/file/style/apidocs/)
-* [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.semanticcms%22%20AND%20a:%22semanticcms-file-style%22)
+* [Maven Central Repository](https://search.maven.org/artifact/com.semanticcms/semanticcms-file-style)
 * [GitHub](https://github.com/aoindustries/semanticcms-file-style)
 
 ## Contact Us
