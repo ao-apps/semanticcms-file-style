@@ -181,7 +181,7 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 		<dependencies>
 			<!-- Direct -->
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId><version>1.2.3${POST-SNAPSHOT}</version>
+				<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId><version>1.2.4${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId><version>0.2.0${POST-SNAPSHOT}</version>
