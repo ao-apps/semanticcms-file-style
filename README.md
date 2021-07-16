@@ -10,6 +10,12 @@
 
 [![Build](https://github.com/aoindustries/semanticcms-file-style/workflows/Build/badge.svg?branch=1.x)](https://github.com/aoindustries/semanticcms-file-style/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-file-style/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-file-style)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=alert_status)](https://sonarcloud.io/dashboard?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=ncloc)](https://sonarcloud.io/component_measures?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style&metric=ncloc)  
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=reliability_rating)](https://sonarcloud.io/component_measures?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style&metric=Reliability)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=security_rating)](https://sonarcloud.io/component_measures?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style&metric=Security)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=sqale_rating)](https://sonarcloud.io/component_measures?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style&metric=Maintainability)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?branch=1.x&project=com.semanticcms%3Asemanticcms-file-style&metric=coverage)](https://sonarcloud.io/component_measures?branch=1.x&id=com.semanticcms%3Asemanticcms-file-style&metric=Coverage)
 
 Default style for files nested within [SemanticCMS](https://github.com/aoindustries/semanticcms) pages and elements.
 
