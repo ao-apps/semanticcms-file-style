@@ -71,20 +71,20 @@ along with semanticcms-file-style.  If not, see <http://www.gnu.org/licenses />.
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/aoindustries/semanticcms-file-style.git</connection>
-		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-file-style.git</developerConnection>
-		<url>https://github.com/aoindustries/semanticcms-file-style</url>
+		<connection>scm:git:git://github.com/ao-apps/semanticcms-file-style.git</connection>
+		<developerConnection>scm:git:git@github.com:ao-apps/semanticcms-file-style.git</developerConnection>
+		<url>https://github.com/ao-apps/semanticcms-file-style</url>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/aoindustries/semanticcms-file-style/issues</url>
+		<url>https://github.com/ao-apps/semanticcms-file-style/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/aoindustries/semanticcms-file-style/actions</url>
+		<url>https://github.com/ao-apps/semanticcms-file-style/actions</url>
 	</ciManagement>
 
 	<repositories>
