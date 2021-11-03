@@ -57,7 +57,7 @@ public class FileStyle implements ServletContextListener {
 		semanticCMS.addLinkCssClassResolver(
 			File.class,
 			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-			(File file) -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+			file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
 				? "semanticcms-file-directory-link"
 				: "semanticcms-file-file-link"
 		);
@@ -65,7 +65,7 @@ public class FileStyle implements ServletContextListener {
 		semanticCMS.addListItemCssClassResolver(
 			File.class,
 			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-			(File file) -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+			file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
 				? "semanticcms-file-list-item-directory"
 				: "semanticcms-file-list-item-file"
 		);
