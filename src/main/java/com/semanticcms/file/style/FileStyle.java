@@ -37,43 +37,43 @@ import javax.servlet.annotation.WebListener;
 @WebListener("Registers the styles for files in RegistryEE and SemanticCMS.")
 public class FileStyle implements ServletContextListener {
 
-	public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-file-style");
+  public static final Group.Name RESOURCE_GROUP = new Group.Name("semanticcms-file-style");
 
-	// TODO: Change to Group.Name once we have group-level ordering
-	public static final Style SEMANTICCMS_FILE = new Style("/semanticcms-file-style/semanticcms-file.css");
+  // TODO: Change to Group.Name once we have group-level ordering
+  public static final Style SEMANTICCMS_FILE = new Style("/semanticcms-file-style/semanticcms-file.css");
 
-	@Override
-	public void contextInitialized(ServletContextEvent event) {
-		ServletContext servletContext = event.getServletContext();
+  @Override
+  public void contextInitialized(ServletContextEvent event) {
+    ServletContext servletContext = event.getServletContext();
 
-		// Add our CSS file
-		RegistryEE.Application.get(servletContext)
-			.activate(RESOURCE_GROUP) // TODO: Activate as-needed
-			.getGroup(RESOURCE_GROUP)
-			.styles
-			.add(SEMANTICCMS_FILE);
+    // Add our CSS file
+    RegistryEE.Application.get(servletContext)
+      .activate(RESOURCE_GROUP) // TODO: Activate as-needed
+      .getGroup(RESOURCE_GROUP)
+      .styles
+      .add(SEMANTICCMS_FILE);
 
-		SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
-		// Add link CSS classes
-		semanticCMS.addLinkCssClassResolver(
-			File.class,
-			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-			file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
-				? "semanticcms-file-directory-link"
-				: "semanticcms-file-file-link"
-		);
-		// Add list item CSS classes
-		semanticCMS.addListItemCssClassResolver(
-			File.class,
-			// TODO: Multiple classes based on file type (from extension or mime type/magic?)
-			file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
-				? "semanticcms-file-list-item-directory"
-				: "semanticcms-file-list-item-file"
-		);
-	}
+    SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
+    // Add link CSS classes
+    semanticCMS.addLinkCssClassResolver(
+      File.class,
+      // TODO: Multiple classes based on file type (from extension or mime type/magic?)
+      file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+        ? "semanticcms-file-directory-link"
+        : "semanticcms-file-file-link"
+    );
+    // Add list item CSS classes
+    semanticCMS.addListItemCssClassResolver(
+      File.class,
+      // TODO: Multiple classes based on file type (from extension or mime type/magic?)
+      file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
+        ? "semanticcms-file-list-item-directory"
+        : "semanticcms-file-list-item-file"
+    );
+  }
 
-	@Override
-	public void contextDestroyed(ServletContextEvent event) {
-		// Do nothing
-	}
+  @Override
+  public void contextDestroyed(ServletContextEvent event) {
+    // Do nothing
+  }
 }
