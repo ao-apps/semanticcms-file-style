@@ -48,27 +48,27 @@ public class FileStyle implements ServletContextListener {
 
     // Add our CSS file
     RegistryEE.Application.get(servletContext)
-      .activate(RESOURCE_GROUP) // TODO: Activate as-needed
-      .getGroup(RESOURCE_GROUP)
-      .styles
-      .add(SEMANTICCMS_FILE);
+        .activate(RESOURCE_GROUP) // TODO: Activate as-needed
+        .getGroup(RESOURCE_GROUP)
+        .styles
+        .add(SEMANTICCMS_FILE);
 
     HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
     // Add link CSS classes
     htmlRenderer.addLinkCssClassResolver(
-      File.class,
-      // TODO: Multiple classes based on file type (from extension or mime type/magic?)
-      file -> file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)
-        ? "semanticcms-file-directory-link"
-        : "semanticcms-file-file-link"
+        File.class,
+        // TODO: Multiple classes based on file type (from extension or mime type/magic?)
+        file -> file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)
+            ? "semanticcms-file-directory-link"
+            : "semanticcms-file-file-link"
     );
     // Add list item CSS classes
     htmlRenderer.addListItemCssClassResolver(
-      File.class,
-      // TODO: Multiple classes based on file type (from extension or mime type/magic?)
-      file -> file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)
-        ? "semanticcms-file-list-item-directory"
-        : "semanticcms-file-list-item-file"
+        File.class,
+        // TODO: Multiple classes based on file type (from extension or mime type/magic?)
+        file -> file.getResourceRef().getPath().toString().endsWith(Path.SEPARATOR_STRING)
+            ? "semanticcms-file-list-item-directory"
+            : "semanticcms-file-list-item-file"
     );
   }
 
