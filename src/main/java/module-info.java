@@ -30,4 +30,4 @@ module com.semanticcms.file.style {
   requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
   requires com.semanticcms.core.servlet; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId>
   requires com.semanticcms.file.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-file-model</artifactId>
-}
+} // TODO: Avoiding rewrite-maven-plugin-4.22.2 truncation
