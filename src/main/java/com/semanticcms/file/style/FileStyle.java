@@ -34,6 +34,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * Registers the styles for files in {@link RegistryEE} and {@link HtmlRenderer}.
+ */
 @WebListener("Registers the styles for files in RegistryEE and HtmlRenderer.")
 public class FileStyle implements ServletContextListener {
 
@@ -50,8 +53,8 @@ public class FileStyle implements ServletContextListener {
     RegistryEE.Application.get(servletContext)
         .activate(RESOURCE_GROUP)// TODO: Activate as-needed
         .getGroup(RESOURCE_GROUP)
-        .styles
-        .add(SEMANTICCMS_FILE);
+            .styles
+            .add(SEMANTICCMS_FILE);
 
     HtmlRenderer htmlRenderer = HtmlRenderer.getInstance(servletContext);
     // Add link CSS classes
