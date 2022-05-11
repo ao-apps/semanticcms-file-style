@@ -34,6 +34,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * Registers the styles for files in {@link RegistryEE} and {@link SemanticCMS}.
+ */
 @WebListener("Registers the styles for files in RegistryEE and SemanticCMS.")
 public class FileStyle implements ServletContextListener {
 
@@ -50,12 +53,12 @@ public class FileStyle implements ServletContextListener {
     RegistryEE.Application.get(servletContext)
         .activate(RESOURCE_GROUP)// TODO: Activate as-needed
         .getGroup(RESOURCE_GROUP)
-        .styles
-        .add(SEMANTICCMS_FILE);
+            .styles
+            .add(SEMANTICCMS_FILE);
 
-    SemanticCMS semanticCMS = SemanticCMS.getInstance(servletContext);
+    SemanticCMS semanticCms = SemanticCMS.getInstance(servletContext);
     // Add link CSS classes
-    semanticCMS.addLinkCssClassResolver(
+    semanticCms.addLinkCssClassResolver(
         File.class,
         // TODO: Multiple classes based on file type (from extension or mime type/magic?)
         file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
@@ -63,7 +66,7 @@ public class FileStyle implements ServletContextListener {
             : "semanticcms-file-file-link"
     );
     // Add list item CSS classes
-    semanticCMS.addListItemCssClassResolver(
+    semanticCms.addListItemCssClassResolver(
         File.class,
         // TODO: Multiple classes based on file type (from extension or mime type/magic?)
         file -> file.getPageRef().getPath().endsWith(Path.SEPARATOR_STRING)
