@@ -32,4 +32,4 @@ module com.semanticcms.file.style {
   requires com.semanticcms.file.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-file-model</artifactId>
   // Transitive
   requires com.semanticcms.core.renderer; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-renderer</artifactId>
-} // TODO: Avoiding rewrite-maven-plugin-4.22.2 truncation
+}
