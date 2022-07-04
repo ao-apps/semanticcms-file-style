@@ -36,15 +36,15 @@ along with semanticcms-file-style.  If not, see <https://www.gnu.org/licenses/>.
     <module.name>com.semanticcms.file.style.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-file-style</documented.artifactId>
-    <documented.name>SemanticCMS File Style²</documented.name>
+    <documented.name>SemanticCMS File Style</documented.name>
     <documented.description>Default style for files nested within SemanticCMS pages and elements.</documented.description>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
 
-  <name>SemanticCMS File Style² Book</name>
+  <name>SemanticCMS File Style Book</name>
   <url>https://semanticcms.com/file/style/</url>
-  <description>Documentation for SemanticCMS File Style² in SemanticCMS format.</description>
+  <description>Documentation for SemanticCMS File Style in SemanticCMS format.</description>
   <inceptionYear>2013</inceptionYear>
 
   <licenses>
