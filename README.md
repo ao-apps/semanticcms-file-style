@@ -23,7 +23,7 @@ Default style for files nested within [SemanticCMS](https://github.com/ao-apps/s
 * [Project Home](https://semanticcms.com/file/style/)
 * [Changelog](https://semanticcms.com/file/style/changelog)
 * [API Docs](https://semanticcms.com/file/style/apidocs/)
-* [Maven Central Repository](https://central.sonatype.com/search?namespace=com.semanticcms&q=a%3Asemanticcms-file-style)
+* [Maven Central Repository](https://central.sonatype.com/artifact/com.semanticcms/semanticcms-file-style)
 * [GitHub](https://github.com/ao-apps/semanticcms-file-style)
 
 ## Contact Us
