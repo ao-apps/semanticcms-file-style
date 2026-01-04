@@ -1,6 +1,6 @@
 /*
  * semanticcms-file-style - Default style for files nested within SemanticCMS pages and elements.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -29,10 +29,10 @@ import com.aoapps.web.resources.registry.Style;
 import com.aoapps.web.resources.servlet.RegistryEE;
 import com.semanticcms.core.servlet.SemanticCMS;
 import com.semanticcms.file.model.File;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
 
 /**
  * Registers the styles for files in {@link RegistryEE} and {@link SemanticCMS}.
