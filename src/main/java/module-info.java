@@ -21,7 +21,6 @@
  * along with semanticcms-file-style.  If not, see <https://www.gnu.org/licenses/>.
  */
 module com.semanticcms.file.style {
-  exports com.semanticcms.file.style;
   // Direct
   requires com.aoapps.net.types; // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
   requires com.aoapps.web.resources.registry; // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
@@ -30,4 +29,6 @@ module com.semanticcms.file.style {
   requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
   requires com.semanticcms.core.servlet; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId>
   requires com.semanticcms.file.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-file-model</artifactId>
+
+  exports com.semanticcms.file.style;
 }
